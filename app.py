@@ -3,7 +3,7 @@ import pandas as pd
 import pickle 
 import streamlit as st
 
-regressor=pickle.load(open('Notebook/model.pkl','rb'))
+regressor=pickle.load(open('moddel/model.pkl','rb'))
 #regressor=pickle.load(pickle_a) # our model
 
 def predict_chance(Category, Accident_type, Year, Month):
@@ -46,7 +46,7 @@ def main():
     result=""
     if st.button("Predict"):
         result=predict_chance(Category,Accident_type,Year,Month) #result will be displayed if button is pressed
-    st.success("The  Number of accidents is {}".format(result))
+    st.success("The  Number of accidents are  {} ".format(result))
         
 if __name__=='__main__':
     main()
